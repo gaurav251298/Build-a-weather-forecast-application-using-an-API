@@ -55,16 +55,16 @@
              document.querySelector('.city').innerHTML=data.name ; 
              document.querySelector('.humidityp').innerHTML=Math.round(data.main.humidity) +"%";
              document.querySelector('.winds').innerHTML=Math.round(data.wind.speed) +"km/h"; 
-             if(data.weather[0].main=="cloud"){
-                image.src="./cloud.png"
-             }else if(data.weather[0].main=="clear"){
-                image.src="./clear.png" 
-             }else if(data.weather[0].main=="drizzle"){
-                image.src="./drizzle.png"   
+             if(data.weather[0].main =="cloud"){
+                image.src="cloud.png"
+             }else if(data.weather[0].main =="clear"){
+                image.src="clear.png" 
+             }else if(data.weather[0].main =="drizzle"){
+                image.src="drizzle.png"   
              }else if(data.weather[0].main=="mist"){
-                image.src="./mist.png" 
+                image.src="mist.png" 
              }else if(data.weather[0].main=="rain"){
-                image.src="./rain.png" 
+                image.src="rain.png" 
              }
         }
         searchBtn.addEventListener('click',()=>{getWeather(searchInput.value);})
